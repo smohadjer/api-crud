@@ -10,7 +10,13 @@ export default async function middleware(req) {
   console.log('method:', req.method);
 
   if (req.method === 'OPTIONS') {
-	next();
+	//next();
+	return Response.json({
+		'status': 'ok'
+	}, {
+		status: 200
+	}
+	);
   }
 
   console.log(authHeader);
