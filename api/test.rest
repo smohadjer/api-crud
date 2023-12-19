@@ -1,9 +1,9 @@
-GET http://localhost:3000/api/
+GET http://localhost:3001/api/quotes
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNzAyOTc0NTk3fQ.l0GtJZphJpIhfURizUjzPmMgLyi_qbzMfdILzA3yJTQ
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNzAyOTc2ODUyfQ.nwt3-QK8Y-CG27rQp1kUGEGJvQzt8CGy7bpRQE9hPeY
 
 ###
 
-GET https://api-saeid-fastmailfm.vercel.app/api/
+GET https://api-saeid-fastmailfm.vercel.app/api/quotes
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNzAyOTc1NTI4fQ.EYCkRYbN0eZBVEFrNazfl_MIxKkzcaDLMTZfKETvh6k
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNzAyOTc2ODUyfQ.nwt3-QK8Y-CG27rQp1kUGEGJvQzt8CGy7bpRQE9hPeY
