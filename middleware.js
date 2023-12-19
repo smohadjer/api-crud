@@ -14,7 +14,10 @@ export default async function middleware(req) {
 	return Response.json({
 		'status': 'ok'
 	}, {
-		status: 200
+		status: 200,
+		headers: {
+			'Access-Control-Request-Headers': '*'
+		}
 	}
 	);
   }
