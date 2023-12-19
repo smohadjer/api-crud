@@ -7,6 +7,12 @@ export const config = {matcher: '/api:Path*'}
 export default async function middleware(req) {
   const authHeader = req.headers.get('authorization');
 
+  console.log(req.method);
+
+  if (req.method === 'OPTION') {
+	next();
+  }
+
   console.log(authHeader);
 
   if (authHeader) {
