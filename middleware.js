@@ -16,7 +16,7 @@ export default async function middleware(req) {
 	}, {
 		status: 200,
 		headers: {
-			'Access-Control-Request-Headers': '*'
+			'Access-Control-Allow-Headers': '*'
 		}
 	}
 	);
