@@ -2,7 +2,7 @@
 import {jwtVerify} from 'jose';
 import { next } from '@vercel/edge';
 
-export const config = {matcher: '/api:Path*'}
+export const config = {matcher: '/api/:path*'}
 
 export default async function middleware(req) {
 	const authHeader = req.headers.get('authorization');
