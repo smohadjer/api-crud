@@ -1,3 +1,9 @@
 GET http://localhost:3000/api/
 Content-Type: application/json
-Authorization: Bearer yourJWTAccessToken
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNzAyOTc0NTk3fQ.l0GtJZphJpIhfURizUjzPmMgLyi_qbzMfdILzA3yJTQ
+
+###
+
+GET https://api-saeid-fastmailfm.vercel.app/api
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNzAyOTc0NTk3fQ.l0GtJZphJpIhfURizUjzPmMgLyi_qbzMfdILzA3yJTQ
