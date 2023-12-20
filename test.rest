@@ -4,6 +4,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxN
 
 ###
 
-GET https://api-saeid-fastmailfm.vercel.app/api/quotes
+GET https://api-jwt.vercel.app/api/quotes
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNzAyOTc2ODUyfQ.nwt3-QK8Y-CG27rQp1kUGEGJvQzt8CGy7bpRQE9hPeY
