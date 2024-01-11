@@ -2,6 +2,7 @@
 import {jwtVerify} from 'jose';
 import { next } from '@vercel/edge';
 
+/* matcher allows us to define which paths middleware should apply to */
 export const config = {matcher: '/api/:path*'}
 
 export default async function middleware(req) {
@@ -22,6 +23,7 @@ export default async function middleware(req) {
 		const secret = new TextEncoder().encode(process.env.secret);
 
 		try {
+			// if accessToken verification fails following line will throw an error
 			const payload = await jwtVerify(accessToken, secret);
 			console.log(payload);
 			next();
