@@ -1,14 +1,16 @@
 /* middleware for vercel edge */
 import {jwtVerify} from 'jose';
-import { next } from '@vercel/edge';
 
 /* matcher allows us to define which paths middleware should apply to */
 export const config = {matcher: '/api/:path*'}
 
 export default async function middleware(req) {
+	// to disable middleware simply add a return statment
+	// return;
+
 	const authHeader = req.headers.get('authorization');
 
-	// for preflight requests
+	// dealing with cors preflight requests
 	if (req.method === 'OPTIONS') {
 		return Response.json({}, {
 			status: 200,
@@ -26,7 +28,6 @@ export default async function middleware(req) {
 			// if accessToken verification fails following line will throw an error
 			const payload = await jwtVerify(accessToken, secret);
 			console.log(payload);
-			next();
 		} catch(err) {
 			return Response.json(
 				{'error': JSON.stringify(err)},
