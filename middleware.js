@@ -17,21 +17,23 @@ const errorResponse = (error) => {
 	);
 };
 
+const corsPreflightResponse = () => {
+	return Response.json({}, {
+		status: 200,
+		headers: {
+			'Access-Control-Allow-Headers': '*'
+		}
+	});
+};
+
 export default async function middleware(req) {
-	// to disable middleware simply add a return statment
+	// to disable middleware uncomment following line
 	// return;
 
 	const authHeader = req.headers.get('authorization');
-	console.log(authHeader);
 
-	// if request is a cors preflight request return 200
 	if (req.method === 'OPTIONS') {
-		return Response.json({}, {
-			status: 200,
-			headers: {
-				'Access-Control-Allow-Headers': '*'
-			}
-		});
+		return corsPreflightResponse();
 	}
 
 	if (authHeader) {
@@ -42,6 +44,7 @@ export default async function middleware(req) {
 			// if accessToken is invalid jwtVerify throws error
 			const payload = await jwtVerify(accessToken, secret);
 			console.log(payload);
+			// we don't return a response so request is is handled next by api
 		} catch(err) {
 			return errorResponse(JSON.stringify(err));
 		}
