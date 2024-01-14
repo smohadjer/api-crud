@@ -7,7 +7,6 @@ Content-Type: application/json
 Authorization: Bearer <JWTAccessToken>
 ````
 
-Localhost
 To run api on localhost you need to install vercel cli and then run command:
 ````
 vercel dev
